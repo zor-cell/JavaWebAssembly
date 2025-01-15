@@ -1,9 +1,9 @@
-async function init() {
+async function initWasm() {
     //initialise cheerPJ
     await cheerpjInit();
 
     //load compiled .jar library
-    const lib = await cheerpjRunLibrary("/app/lib/JavaWebAssembly.jar");
+    const lib = await cheerpjRunLibrary("/app/src/wasm/lib/JavaWebAssembly.jar");
 
     //call Main
     const Main = await lib.code.Main;
@@ -16,4 +16,4 @@ async function init() {
     console.log(response);
 }
 
-init();
+initWasm();

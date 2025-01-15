@@ -1,13 +1,19 @@
 async function init() {
+    //initialise cheerPJ
     await cheerpjInit();
-    const lib = await cheerpjRunLibrary("/app/lib/Connect4.jar");
 
-    const Test = await lib.connect4.Test;
-    let test = await new Test;
-    await test.hello();
+    //load compiled .jar library
+    const lib = await cheerpjRunLibrary("/app/lib/JavaWebAssembly.jar");
 
-    const Main = await lib.connect4.Main;
+    //call Main
+    const Main = await lib.code.Main;
     await Main.main([]);
+
+    //Call Test
+    const Test = await lib.code.Test;
+    let test = await new Test;
+    const response = await test.hello();
+    console.log(response);
 }
 
 init();

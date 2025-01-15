@@ -1,4 +1,4 @@
-# JavaWebAssembly
+# Java + WebAssembly
 This repository acts as a template to combine Java code with WebAssembly. The main purpose is to be able to write performant and efficient
 code that can be run in the web. This will be used for multiple projects regarding my blog.
 
@@ -17,7 +17,19 @@ tag in the _index.html_ file.
 with Java 8.
 
 ## Usage
-Start a local HTTP development server in the _webapp/_ directory:
+A brief overview of how this repository can be used.
+
+### Java Compilation
+Compile .jar file:\
+The _.idea_ folder is present in the repository on purpose, as it includes preconfigured
+build configurations for building artifacts that compile all 
+source code files to the _webapp/lib_ folder where it is used in WebAssembly.
+
+Alternatively, the .jar file can be compiled like this:\
+
+
+### Development Server
+Start a local HTTP development server in the _webapp_ directory:
 
 With python:\
 `~/JavaWebAssembly/webapp: python -m http.server`
@@ -25,3 +37,5 @@ With python:\
 Or with node:\
 `~/JavaWebAssembly/webapp:  npx http-server`
 
+When accessing the hosted webpage, the message "" in the console indicates the
+successful WebAssembly integration.

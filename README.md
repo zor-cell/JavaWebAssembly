@@ -38,7 +38,7 @@ Compile java class files with Java 8:\
 Compile java class files to .jar file:\
 `~/JavaWebAssembly: jar cfm webapp/lib/JavaWebAssembly.jar src/META-INF/MANIFEST.MF -C out .`
 
-### Development Server
+### Local Development Server
 Start a local HTTP development server in the _webapp_ directory:
 
 With python:\
@@ -47,5 +47,5 @@ With python:\
 Or with node:\
 `~/JavaWebAssembly/webapp:  npx http-server`
 
-When accessing the hosted webpage, the message "" in the console indicates the
-successful WebAssembly integration.
+When accessing the hosted webpage, the messages _"Hello from Main!"_ and 
+_"Hello from Test!"_ in the console indicate successful WebAssembly integration.

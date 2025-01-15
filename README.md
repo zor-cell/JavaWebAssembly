@@ -38,14 +38,17 @@ Compile java class files with Java 8:\
 Compile java class files to .jar file:\
 `~/JavaWebAssembly: jar cfm webapp/lib/JavaWebAssembly.jar src/META-INF/MANIFEST.MF -C out .`
 
-### Local Development Server
-Start a local HTTP development server in the _webapp_ directory:
+### Start Website
+The frontend requires [Node.js](https://nodejs.org/en) to be installed. The pre-installed frontend
+uses React combined with Typescript for easy development. For large projects with multiple
+pages Angular is a better option.
 
-With python:\
-`~/JavaWebAssembly/webapp: python -m http.server`
+Install dependencies:\
+`~/JavaWebAssembly/webapp: npm install`
 
-Or with node:\
-`~/JavaWebAssembly/webapp:  npx http-server`
+Run development server:\
+`~/JavaWebAssembly/webapp: npm run dev`
 
 When accessing the hosted webpage, the messages _"Hello from Main!"_ and 
 _"Hello from Test!"_ in the console indicate successful WebAssembly integration.
+The Web page should display _"Hello from React!" to indicate proper React integration.

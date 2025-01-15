@@ -20,13 +20,23 @@ with Java 8.
 A brief overview of how this repository can be used.
 
 ### Java Compilation
-Compile .jar file:\
+An overview of how the Java source files can be compiled to a .jar file that
+is used in WebAssembly.
+
+#### IntelliJ .jar file compilation
 The _.idea_ folder is present in the repository on purpose, as it includes preconfigured
-build configurations for building artifacts that compile all 
-source code files to the _webapp/lib_ folder where it is used in WebAssembly.
+build configurations for building artifacts that create a
+new .jar file in the _webapp/lib_ folder.
 
-Alternatively, the .jar file can be compiled like this:\
+Go to _Build -> Build Artifacts -> Rebuild_ in IntelliJ settings.
 
+#### Terminal .jar file compilation
+
+Compile java class files with Java 8:\
+`~/JavaWebAssembly: javac -source 1.8 -target 1.8 -d out src/code/*.java`
+
+Compile java class files to .jar file:\
+`~/JavaWebAssembly: jar cfm webapp/lib/JavaWebAssembly.jar src/META-INF/MANIFEST.MF -C out .`
 
 ### Development Server
 Start a local HTTP development server in the _webapp_ directory:
